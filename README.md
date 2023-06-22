@@ -120,5 +120,4 @@ build out any helper methods if needed.
   - Reminder: you can calculate the average by adding up all the orders prices and
     dividing by the number of orders
 
-### Bonus: For any invalid inputs raise an `Exception`.
 
