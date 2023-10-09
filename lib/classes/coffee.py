@@ -1,13 +1,18 @@
 class Coffee:
     def __init__(self, name):
-        self.name = name
+        self._name = name
         self.orders = []
-    
+
+    @property
+    def name(self):
+        return self._name
+
     def get_customers(self):
-        pass
-    
+        return [order.customer for order in self.orders]
+
     def num_orders(self):
-        pass
-    
+        return len(self.orders)
+
     def average_price(self):
-        pass
+        total_price = sum(order.price for order in self.orders)
+        return total_price / len(self.orders) if self.orders else 0
